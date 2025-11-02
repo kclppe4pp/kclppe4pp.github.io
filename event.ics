@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KCL DPE//PPE for Public Policy Graduate Conference 2025//EN
+BEGIN:VEVENT
+UID:kcl-ppe-conf-2025@kcl.ac.uk
+DTSTAMP:20251102T152632Z
+DTSTART:20251126T090000Z
+DTEND:20251126T180000Z
+SUMMARY:KCL PPE for Public Policy Graduate Conference 2025
+LOCATION:FWB 111, Waterloo Campus, King's College London, London, UK
+DESCRIPTION:One-day graduate conference hosted by the Department of Political Economy, King’s College London. See website for details.
+END:VEVENT
+END:VCALENDAR
