@@ -1,14 +1,41 @@
 :root { --bg:#faf6ef; --ink:#1c1b1a; --muted:#6b6b6b; --accent:#b3212e; --card:#ffffff; }
 *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
 a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-.container{max-width:980px;margin:0 auto;padding:24px} .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0;position:sticky;top:0;background:var(--bg);border-bottom:1px solid #e9e4dc;z-index:10}
+.container{max-width:980px;margin:0 auto;padding:24px} .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 0;position:sticky;top:0;background:var(--bg);border-bottom:1px solid #e9e4dc;z-index:10;flex-wrap:wrap}
 .brand{font-weight:700;letter-spacing:.2px} nav a{margin-left:16px;font-weight:600}
 .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:24px 0 8px}
 .hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px} .badge{background:var(--card);border:1px solid #e9e4dc;border-radius:999px;padding:6px 10px;font-size:14px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px} .button{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--accent);color:#fff;background:var(--accent);font-weight:700} .button.secondary{background:transparent;color:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px} .button{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--accent);color:#fff;background:var(--accent);font-weight:700;font-size:14px} .button.secondary{background:transparent;color:var(--accent)}
 .card{background:var(--card);border:1px solid #e9e4dc;border-radius:14px;padding:16px} .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 .col-4{grid-column:span 4} .col-6{grid-column:span 6} .col-8{grid-column:span 8} .col-12{grid-column:span 12}
 section{padding:24px 0} h2{font-size:24px;margin:0 0 12px} .small{color:var(--muted);font-size:14px} .footer{margin:24px 0 64px;color:var(--muted)}
 img.poster{width:100%;height:auto;border-radius:12px;border:1px solid #e9e4dc} ul.clean{padding-left:18px;margin:8px 0} .kicker{letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--muted);font-weight:700}
-@media (max-width:880px){.hero{grid-template-columns:1fr}}
+
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .container{padding:16px}
+  nav{flex-direction:column;align-items:flex-start;gap:8px}
+  nav a{margin-left:0;display:block;padding:8px 0}
+  .cta{flex-direction:column}
+  .button{width:100%;text-align:center;font-size:14px}
+}
+
+@media (max-width:640px){
+  html,body{font-size:14px}
+  .hero h1{font-size:28px}
+  .container{padding:12px}
+  .nav{flex-direction:column;align-items:flex-start;padding:12px 0;gap:12px}
+  .brand{font-size:14px}
+  nav a{font-size:14px;margin-left:0;padding:6px 0}
+  .badges{margin:12px 0}
+  .badge{font-size:12px;padding:4px 8px}
+  .cta{gap:8px}
+  .button{padding:8px 12px;font-size:13px;width:100%}
+  .grid{gap:12px}
+  .col-4{grid-column:span 12}
+  .col-6{grid-column:span 12}
+  .col-8{grid-column:span 12}
+  section{padding:16px 0}
+  h2{font-size:20px}
+}
